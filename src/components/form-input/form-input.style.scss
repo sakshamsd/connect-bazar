@@ -1,0 +1,67 @@
+/* form text input */
+.form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+
+    &.form-lg {
+        width: 466px;
+    }
+
+    .form-input-label {
+        font-size: 12px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .input-container {
+        position: relative;
+        height: 46px;
+
+        .form-input {
+            padding: 10px 10px;
+            width: 100%;
+            height: 46px;
+            font-size: 14px;
+            border: 1px solid var(--input-border);
+            box-sizing: border-box;
+            border-radius: 5px;
+            outline: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        .password-visibility {
+            height: 46px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+
+            img {
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+
+    .form-validation-error {
+        color: var(--red-button);
+        font-size: 11px;
+        text-align: right;
+        height: 15px;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .form-input-wrapper {
+        &.form-lg {
+            width: 374px;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+@import "../../assets/scss/colors.scss";
+
+.login-wrapper {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+
+    .login-details-container {
+        width: 848px;
+        height: 100%;
+        position: relative;
+
+        .login-content {
+            width: 466px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            margin: auto;
+            left: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .login-extra-container {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 12px;
+                height: 20px;
+                margin-top: 20px;
+
+                .remember-checkbox-content {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .remember-number-checkbox {
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 2px;
+                }
+
+                .forgot-password {
+                    color: var(--blue);
+                }
+
+
+            }
+
+            .login-button,
+            .create-account-button {
+                width: 100%;
+                height: 46px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 0;
+                outline: 0;
+            }
+
+            .login-button {
+                background-color: var(--red-button);
+                color: var(--white);
+                margin-top: 40px;
+                cursor: pointer;
+
+                &:disabled {
+                    background-color: var(--red-button-disabled);
+                }
+            }
+
+            .register-label {
+                width: 100%;
+                margin: 20px 0px 10px 0px;
+                font-size: 14px;
+                line-height: 19px;
+                /* identical to box height */
+
+                text-align: center;
+
+                color: var(--dark-grey-label);
+            }
+
+            .create-account-button {
+                background: var(--grey-button);
+                color: var(--mid-grey-label);
+            }
+
+            .login-header {
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    .login-image-container {
+        width: 1072px;
+        height: 100%;
+        background-image: url("../../assets/images/login.png");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login-wrapper {
+        width: 100%;
+        height: 100vh;
+
+        .login-details-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: static;
+            overflow: scroll;
+
+
+            .login-content {
+                width: 374px;
+                position: static;
+            }
+        }
+
+        .login-image-container {
+            width: 0px;
+            display: none;
+        }
+    }
+}
